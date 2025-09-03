@@ -2,17 +2,15 @@ import {
   Box,
   Button,
   Checkbox,
-  ClientOnly,
   HStack,
   Heading,
   Progress,
   RadioGroup,
-  Skeleton,
   VStack,
 } from "@chakra-ui/react"
-import { ColorModeToggle } from "./components/ColorModeToggle"
+import { ColorModeButton } from "./components/ui/color-mode"
 
-export default function Page() {
+export default function App() {
   return (
     <Box textAlign="center" fontSize="xl" pt="30vh">
       <VStack gap="8">
@@ -62,9 +60,7 @@ export default function Page() {
       </VStack>
 
       <Box pos="absolute" top="4" right="4">
-        <ClientOnly fallback={<Skeleton w="10" h="10" rounded="md" />}>
-          <ColorModeToggle />
-        </ClientOnly>
+        <ColorModeButton />
       </Box>
     </Box>
   )
