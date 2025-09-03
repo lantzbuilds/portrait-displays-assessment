@@ -1,4 +1,8 @@
-## Project Outline: Portrait Displays Assessment App
+# Project Outline: Portrait Displays Assessment App
+
+## Specs
+
+Create a simple app that runs on React, Node and Vite. Make a button or two that gets data (from JSON or something else) and presents some of the data on the page. Could populate a table, list, firstname/lastname, etc.
 
 ### 1. Project Setup
 - Initialize a new project (monorepo with separate folders for frontend/backend)
@@ -33,7 +37,4 @@
 ### 6. Deployment (Optional)
 - Prepare scripts for local and production builds
 - Document setup and usage in README.md
-# Specs
-
-Create a simple app that runs on React, Node and Vite. Make a button or two that gets data (from JSON or something else) and presents some of the data on the page. Could populate a table, list, firstname/lastname, etc.
 
