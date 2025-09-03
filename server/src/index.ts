@@ -19,7 +19,12 @@ const products = [
 
 // GET endpoint to fetch products
 app.get('/api/products', (req: Request, res: Response) => {
-  res.json(products);
+  const { sort } = req.query;
+  let result = [...products];
+  if (sort === 'name') {
+    result.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  res.json(result);
 });
 
 // Root endpoint

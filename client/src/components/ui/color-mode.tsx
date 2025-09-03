@@ -11,7 +11,7 @@ import { LuMoon, LuSun } from "react-icons/lu";
 export function ColorModeProvider({ children }: { children: React.ReactNode }) {
   // attribute="class" applies `light` / `dark` class to <html> for Chakra v3 tokens
   return (
-    <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
+    <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem>
       {children}
     </NextThemesProvider>
   );
