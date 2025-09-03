@@ -5,6 +5,7 @@ import {
   Heading,
   VStack,
   Table,
+  Image
 } from "@chakra-ui/react"
 import { ColorModeButton } from "./components/ui/color-mode"
 
@@ -38,18 +39,31 @@ export default function App() {
   ));
 
   return (
-    <Box textAlign="center" fontSize="xl" pt="30vh">
-      <VStack gap="8">
-        <img alt="portrait logo" src="https://www.portrait.com/wp-content/uploads/2022/07/logo-white-no-tagline.png" width="280" />
-        <Heading size="2xl" letterSpacing="tight">
+    <Box
+      textAlign="center"
+      fontSize={['md', 'lg', 'xl']}
+      pt={['10vh', '20vh', '30vh']}
+      px={[2, 4, 8]}
+    >
+      <VStack gap={[4, 6, 8]}>
+        <Image
+          alt="portrait logo"
+          src="https://www.portrait.com/wp-content/uploads/2022/07/logo-white-no-tagline.png"
+          maxW={["120px", "180px", "280px"]}
+          mx="auto"
+          width="100%"
+        />
+        <Heading size={['lg', 'xl', '2xl']} letterSpacing="tight">
           Portrait Displays Product Line
         </Heading>
 
-        <Button id="fetch-products" onClick={handleRefresh}>Refresh Products</Button>
+        <Button id="fetch-products" onClick={handleRefresh} size={['sm', 'md', 'lg']}>
+          Refresh Products
+        </Button>
       </VStack>
-     
-      <Box maxW="800px" mx="auto" mt={8}>
-        <Table.Root variant="outline" size="md">
+
+      <Box maxW={['100%', '600px', '800px']} mx="auto" mt={[4, 6, 8]} px={[0, 2, 4]}>
+        <Table.Root variant="outline" size={['sm', 'md', 'md']}>
           <Table.Header>
             <Table.Row>
               <Table.ColumnHeader>Name</Table.ColumnHeader>
@@ -62,7 +76,7 @@ export default function App() {
         </Table.Root>
       </Box>
 
-      <Box pos="absolute" top="4" right="4">
+      <Box pos="absolute" top={[2, 4, 4]} right={[2, 4, 4]}>
         <ColorModeButton />
       </Box>
     </Box>
