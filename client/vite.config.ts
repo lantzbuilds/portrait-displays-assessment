@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from "path"
+// import { resolve } from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@chakra-ui/react": resolve("..", "..", "packages/react/src")
-    }
-  }
+  // resolve: {
+  //   alias: {
+  //     "@chakra-ui/react": resolve("..", "..", "packages/react/src")
+  //   }
+  // }
 })
