@@ -6,8 +6,6 @@ import { ThemeProvider as NextThemesProvider, useTheme as useNextTheme } from "n
 import { IconButton, Skeleton, ClientOnly } from "@chakra-ui/react";
 import { LuMoon, LuSun } from "react-icons/lu";
 
-// Public API matching Chakra v3 docs
-// ---------------------------------
 export function ColorModeProvider({ children }: { children: React.ReactNode }) {
   // attribute="class" applies `light` / `dark` class to <html> for Chakra v3 tokens
   return (
@@ -58,7 +56,7 @@ export function ColorModeButton() {
   );
 }
 
-// Optional: single Provider that includes Chakra + ColorMode
+// Combinded single Provider that includes Chakra + ColorMode
 export function Provider({ children }: { children: React.ReactNode }) {
   return (
     <ChakraProvider value={defaultSystem}>
